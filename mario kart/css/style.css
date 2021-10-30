@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+.sky{
+    height: 40%;
+    background-color: rgb(61, 200, 255);
+}
+.grass{
+    height: 30%;
+    background-color: seagreen;
+}
+.road{
+    height: 30%;
+    background-color: dimgray;
+    border-top: 10px solid gray;
+    border-bottom: 10px solid gray;
+}
+.lines{
+    position: relative;
+    top: 45%;
+    height: 0px;
+    width: 100%;
+    border-bottom: 5px dashed #fff;
+}
+/*characters*/
+.mario{
+    width: 150px;
+    height: 100px;
+    position:relative;
+    top: -70px;
+    left: 0;
+    animation: drive 5s both 6 2s ease-in-out,
+     jump 0.3s 4s ease-in-out;
+}
+.yoshi{
+    width: 150px;
+    height: 150px;
+    position:relative;
+    top: 40px;
+    left: 0;
+    animation: drive 6.5s both 5 2s ease-in-out;
+}
+/*items*/
+#firstcloud{
+    height: 50px;
+    width: 80px;
+    position: relative;
+    top:20px ;
+    animation:wind 250s both 1s infinite;
+    opacity: 0.8;
+}
+#secondcloud{
+    height: 80px;
+    width: 120px;
+    position: relative;
+    top:60px ;
+    animation:wind reverse 90s both 1s infinite;
+}
+/*key frames*/
+@keyframes drive{
+    from{transform: translatex(-300px);}
+    to{transform: translatex(1900px);}
+}
+@keyframes jump{
+    0%{top: -70px;}
+    30%{top: -100px;}
+    50%{top: -125px;}
+    70%{top: -100px;}
+    100%{top: -70px;}
+}
+@keyframes wind{
+    from{transform: translateX(50px);}
+    to{transform: translateX(1550px);}
+}
